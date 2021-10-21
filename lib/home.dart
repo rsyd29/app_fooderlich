@@ -9,7 +9,26 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  // TODO: Add state variables and functions
+  // _selectedIndex keeps track of which tab is currently selected. The underscore in _selectedIndex signifies it’s private. The selected index is the state being tracked by _HomeState.
+  int _selectedIndex = 0;
+
+  // Here, you define the widgets that will display on each tab. For now, when you tap between the different tab bar items, it shows container widgets of different colors. Soon, you’ll replace each of these with card widgets.
+  static List<Widget> pages = <Widget>[
+    // TODO: Replace with Card1
+    Container(color: Colors.red),
+    // TODO: Replace with Card2
+    Container(color: Colors.green),
+    // TODO: Replace with Card3
+    Container(color: Colors.blue),
+  ];
+
+  // This function handles tapped tab bar items. Here, you set the index of the item that the user pressed. setState() notifies the framework that the state of this object has changed, then rebuilds this widget internally.
+  void _onItemTapped(int index) {
+    setState(() {
+      _selectedIndex = index;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,19 +39,15 @@ class _HomeState extends State<Home> {
           style: Theme.of(context).textTheme.headline6,
         ),
       ),
-      // TODO: Show selected tab
-      body: Center(
-        child: Text(
-          'Let\'s get cooking 👩‍🍳',
-          // 3. As with the AppBar, you’ve also updated the Text style to use the Theme.of(context).
-          style: Theme.of(context).textTheme.headline1,
-        ),
-      ),
+      body: pages[_selectedIndex],
       // 4. Defined a BottomNavigationBar.
       bottomNavigationBar: BottomNavigationBar(
         // 5. Set the selection color of an item when tapped.
         selectedItemColor: Theme.of(context).textSelectionTheme.selectionColor,
-        // TODO: Set selected tab bar
+        // currentIndex will tell the bottom navigation bar which tab bar item to highlight.
+        currentIndex: _selectedIndex,
+        // When the user taps on a tab bar item, it calls the _onItemTapped handler, which updates the state with the correct index. In this case, it changes the color.
+        onTap: _onItemTapped,
         // 6. Defined three bottom navigation tab bar items.
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
