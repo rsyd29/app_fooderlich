@@ -28,7 +28,27 @@ class _HomeState extends State<Home> {
           style: Theme.of(context).textTheme.headline1,
         ),
       ),
-      // TODO: Add bottom navigation bar
+      // 4. Defined a BottomNavigationBar.
+      bottomNavigationBar: BottomNavigationBar(
+        // 5. Set the selection color of an item when tapped.
+        selectedItemColor: Theme.of(context).textSelectionTheme.selectionColor,
+        // TODO: Set selected tab bar
+        // 6. Defined three bottom navigation tab bar items.
+        items: const <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+            icon: Icon(Icons.card_giftcard),
+            label: 'Card',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.card_giftcard),
+            label: 'Card2',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.card_giftcard),
+            label: 'Card3',
+          ),
+        ],
+      ),
     );
   }
 }

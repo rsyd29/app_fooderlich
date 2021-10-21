@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 // Imported the FooderlichTheme.
 import 'fooderlich_theme.dart';
+import 'home.dart';
 
 void main() {
   // 1. Everything in Flutter starts with a widget. runApp() takes in the root widget Fooderlich.
@@ -21,23 +22,7 @@ class Fooderlich extends StatelessWidget {
       // Added the MaterialApp widget’s theme property.
       theme: theme,
       title: 'Fooderlich',
-      // 4. The MaterialApp widget contains a Scaffold widget, which defines the layout and structure of the app. The scaffold has two properties: an appBar and a body. An Appbar’s title contains a Text widget. The body has a Center widget, whose child property is a Text widget.
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text(
-            'Fooderlich',
-            // Added AppBar text styling.
-            style: theme.textTheme.headline6,
-          ),
-        ),
-        body: Center(
-          child: Text(
-            'Let\'s get cooking 👩‍🍳',
-            // Finally, added body text styling.
-            style: theme.textTheme.headline1,
-          ),
-        ),
-      ),
+      home: const Home(),
     );
   }
 }
