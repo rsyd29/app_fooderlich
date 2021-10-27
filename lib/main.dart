@@ -27,3 +27,15 @@ class Fooderlich extends StatelessWidget {
     );
   }
 }
+
+/***
+ * Where to go from here?
+
+    If you want to learn more theory about how widgets work, check out the following links:
+
+    1. Detailed architectural overview of Flutter and widgets: https://flutter.dev/docs/resources/architectural-overview.
+
+    2. The Flutter team created a YouTube series explaining widgets under the hood: https://www.youtube.com/playlist?list=PLjxrf2q8roU2HdJQDjJzOeO6J3FoFLWr2.
+
+    3. The Flutter team gave a talk in China on how to render widgets: https://youtu.be/996ZgFRENMs.
+ */
