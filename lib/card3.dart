@@ -33,7 +33,36 @@ class Card3 extends StatelessWidget {
                 ),
               ),
             ),
-            // TODO 6: add Container, Column, Icon and Text
+            Container(
+              // 3. Apply padding of 16 pixels on all sides.
+              padding: const EdgeInsets.all(16),
+              // 4. Set up a child Column to lay out the widgets vertically.
+              child: Column(
+                // 5. Position all the widgets to the left of the column.
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  // 6. Add a book icon.
+                  const Icon(
+                    Icons.book,
+                    color: Colors.white,
+                    size: 40,
+                  ),
+                  // 7. Apply a 8-pixel space vertically.
+                  const SizedBox(
+                    height: 8,
+                  ),
+                  // 8. Add the text widget.
+                  Text(
+                    'Recipe Trends',
+                    style: FooderlichTheme.darkTextTheme.headline2,
+                  ),
+                  // 9. Apply a 30-pixel space vertically.
+                  const SizedBox(
+                    height: 30,
+                  ),
+                ],
+              ),
+            )
             // TODO 7: add Center widget with Chip widget children
           ],
         ),
