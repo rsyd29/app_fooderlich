@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'fooderlich_theme.dart';
 
 class Card1 extends StatelessWidget {
   const Card1({Key? key}) : super(key: key);
@@ -17,6 +18,26 @@ class Card1 extends StatelessWidget {
       // TODO: Card1 Decorate Container
       child: Container(
         // TODO: Add a stack of text
+        child: Stack(
+          children: [
+            Text(
+              category,
+              style: FooderlichTheme.darkTextTheme.bodyText1,
+            ),
+            Text(
+              title,
+              style: FooderlichTheme.darkTextTheme.headline5,
+            ),
+            Text(
+              description,
+              style: FooderlichTheme.darkTextTheme.bodyText1,
+            ),
+            Text(
+              chef,
+              style: FooderlichTheme.darkTextTheme.bodyText1,
+            ),
+          ],
+        ),
         // 1. Apply a padding of 16 on all sides of the box. Flutter units are specified in logical pixels, which are like dp on Android.
         padding: const EdgeInsets.all(16),
         // 2. Constrain the container’s size to a width of 350 and a height of 450.
