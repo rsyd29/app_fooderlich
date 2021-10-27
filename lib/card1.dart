@@ -15,9 +15,7 @@ class Card1 extends StatelessWidget {
   Widget build(BuildContext context) {
     // 3. Start with a Container laid out in the center.
     return Center(
-      // TODO: Card1 Decorate Container
       child: Container(
-        // TODO: Add a stack of text
         child: Stack(
           children: [
             // 8. The category, Editor’s Choice, stays where it is. Remember, Container already applies a padding of 16 on all sides.

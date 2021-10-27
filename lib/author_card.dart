@@ -18,7 +18,6 @@ class AuthorCard extends StatelessWidget {
   // 2. AuthorCard is grouped in a container and uses a Row widget to lay out the other widgets horizontally.
   @override
   Widget build(BuildContext context) {
-    // TODO: Replace return Container(...);
     return Container(
       padding: const EdgeInsets.all(16),
       child: Row(
