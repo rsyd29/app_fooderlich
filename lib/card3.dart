@@ -22,8 +22,17 @@ class Card3 extends StatelessWidget {
           ),
         ),
         child: Stack(
-          children: const [
-            // TODO 5: add dark overlay BoxDecoration
+          children: [
+            Container(
+              decoration: BoxDecoration(
+                // 1. You add a container with a color overlay with a 60% semi-transparent background to make the image appear darker.
+                color: Colors.black.withOpacity(0.6),
+                // 2. This gives the appearance of rounded image corners.
+                borderRadius: const BorderRadius.all(
+                  Radius.circular(10.0),
+                ),
+              ),
+            ),
             // TODO 6: add Container, Column, Icon and Text
             // TODO 7: add Center widget with Chip widget children
           ],
