@@ -17,7 +17,7 @@ class Fooderlich extends StatelessWidget {
   Widget build(BuildContext context) {
     // Defined a variable that holds the theme.
     final theme = FooderlichTheme
-        .dark(); // to see the difference between light and dark mode. Change the theme between FooderlichTheme.dark() and FooderlichTheme.light().
+        .light(); // to see the difference between light and dark mode. Change the theme between FooderlichTheme.dark() and FooderlichTheme.light().
     // 3. The Fooderlich widget starts by composing a MaterialApp widget to give it a Material Design system look and feel. See https://material.io for more details about it.
     return MaterialApp(
       // Added the MaterialApp widget’s theme property.
