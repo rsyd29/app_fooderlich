@@ -20,21 +20,36 @@ class Card1 extends StatelessWidget {
         // TODO: Add a stack of text
         child: Stack(
           children: [
+            // 8. The category, Editor’s Choice, stays where it is. Remember, Container already applies a padding of 16 on all sides.
             Text(
               category,
               style: FooderlichTheme.darkTextTheme.bodyText1,
             ),
-            Text(
-              title,
-              style: FooderlichTheme.darkTextTheme.headline5,
+            // 9. You place the title 20 pixels from the top.
+            Positioned(
+              child: Text(
+                title,
+                style: FooderlichTheme.darkTextTheme.headline5,
+              ),
+              top: 20,
             ),
-            Text(
-              description,
-              style: FooderlichTheme.darkTextTheme.bodyText1,
+            // 10. Here, you position the description 30 pixels from the bottom and 0 to the right.
+            Positioned(
+              child: Text(
+                description,
+                style: FooderlichTheme.darkTextTheme.bodyText1,
+              ),
+              bottom: 30,
+              right: 0,
             ),
-            Text(
-              chef,
-              style: FooderlichTheme.darkTextTheme.bodyText1,
+            // 11. Finally, you position the chef’s name 10 pixels from the bottom-right.
+            Positioned(
+              child: Text(
+                chef,
+                style: FooderlichTheme.darkTextTheme.bodyText1,
+              ),
+              bottom: 10,
+              right: 0,
             ),
           ],
         ),
