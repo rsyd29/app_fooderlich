@@ -22,7 +22,37 @@ class AuthorCard extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.all(16),
       child: Row(
-        children: [],
+        // TODO 3: add alignment
+        children: [
+          // 1. The inner Row groups the CircleImage and the author’s Text information.
+          Row(
+            children: [
+              CircleImage(
+                imageProvider: imageProvider,
+                imageRadius: 28,
+              ),
+              // 2. Applies 8 pixels of padding between the image and the text.
+              const SizedBox(
+                width: 8,
+              ),
+              // 3. Lays out the author’s name and job title vertically using a Column.
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    authorName,
+                    style: FooderlichTheme.lightTextTheme.headline2,
+                  ),
+                  Text(
+                    title,
+                    style: FooderlichTheme.lightTextTheme.headline3,
+                  ),
+                ],
+              ),
+            ],
+          ),
+          // TODO 2: add IconButton
+        ],
       ),
     );
   }
