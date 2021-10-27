@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import 'card1.dart';
 import 'card2.dart';
+import 'card3.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -15,12 +16,10 @@ class _HomeState extends State<Home> {
   int _selectedIndex = 0;
 
   // Here, you define the widgets that will display on each tab. For now, when you tap between the different tab bar items, it shows container widgets of different colors. Soon, you’ll replace each of these with card widgets.
-  static List<Widget> pages = <Widget>[
-    const Card1(),
-    const Card2(),
-    Container(color: Colors.green),
-    // TODO: Replace with Card3
-    Container(color: Colors.blue),
+  static List<Widget> pages = const <Widget>[
+    Card1(),
+    Card2(),
+    Card3(),
   ];
 
   // This function handles tapped tab bar items. Here, you set the index of the item that the user pressed. setState() notifies the framework that the state of this object has changed, then rebuilds this widget internally.
